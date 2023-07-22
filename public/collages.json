@@ -1,0 +1,93 @@
+[
+    {
+        "image": "college1.jpg",
+        "college_name": "ABC University",
+        "admission_dates": "2023-08-15",
+        "events": ["Freshers' Party", "Tech Fest", "Cultural Night"],
+        "research_history": "Founded in 1950, renowned for groundbreaking research in various fields.",
+        "sports": ["Football", "Basketball", "Swimming"],
+        "rating" : 5
+      },
+      {
+        "image": "college2.jpg",
+        "college_name": "XYZ College",
+        "admission_dates": "2023-09-01",
+        "events": ["Orientation Day", "Annual Sports Meet", "Literary Festival"],
+        "research_history": "Home to the state-of-the-art research center for advanced technology.",
+        "sports": ["Cricket", "Tennis", "Badminton"],
+        "rating" : 4
+      },
+      {
+        "image": "college3.jpg",
+        "college_name": "EFG Institute",
+        "admission_dates": "2023-08-20",
+        "events": ["College Fest", "Science Exhibition", "Alumni Reunion"],
+        "research_history": "Established in 1965, known for pioneering research in environmental sciences.",
+        "sports": ["Volleyball", "Athletics", "Table Tennis"],
+        "rating" : 4.5
+      },
+      {
+        "image": "college4.jpg",
+        "college_name": "PQR University",
+        "admission_dates": "2023-09-05",
+        "events": ["Annual Day Celebration", "Robotics Expo", "Debate Competition"],
+        "research_history": "Has a rich history of producing Nobel laureates and impactful research.",
+        "sports": ["Hockey", "Chess", "Gymnastics"],
+        "rating":3.9
+      },
+      {
+        "image": "college5.jpg",
+        "college_name": "LMN College of Arts",
+        "admission_dates": "2023-08-25",
+        "events": ["Art Exhibition", "Drama Fest", "Music Night"],
+        "research_history": "Promotes artistic research and innovation in visual arts and performing arts.",
+        "sports": ["Paintball", "Dance", "Yoga"],
+        "rating" : 5
+      },
+      {
+        "image": "college6.jpg",
+        "college_name": "RST Engineering Institute",
+        "admission_dates": "2023-09-10",
+        "events": ["Tech Expo", "Coding Contest", "RoboWars"],
+        "research_history": "Known for groundbreaking research in engineering and technology advancements.",
+        "sports": ["Archery", "Car Racing", "Martial Arts"],
+        "rating" : 3
+      },
+      {
+        "image": "college7.jpg",
+        "college_name": "UVW Medical College",
+        "admission_dates": "2023-08-30",
+        "events": ["Medical Symposium", "Health Camp", "White Coat Ceremony"],
+        "research_history": "Has a rich legacy of medical breakthroughs and life-saving research.",
+        "sports": ["Cricket", "Basketball", "Athletics"],
+        "rating" : 4.4
+      },
+      {
+        "image": "college8.jpg",
+        "college_name": "MNO Business School",
+        "admission_dates": "2023-09-15",
+        "events": ["Entrepreneurship Summit", "Leadership Conference", "Business Quiz"],
+        "research_history": "Focuses on research in management and business strategies.",
+        "sports": ["Golf", "Squash", "Rugby"],
+        "rating" : 5
+      },
+      {
+        "image": "college9.jpg",
+        "college_name": "JKL Law College",
+        "admission_dates": "2023-08-22",
+        "events": ["Legal Symposium", "Moot Court Competition", "Law Fest"],
+        "research_history": "Known for groundbreaking legal research and contributions to the legal field.",
+        "sports": ["Tennis", "Basketball", "Chess"],
+        "rating" : 4.8
+      },
+      {
+        "image": "college10.jpg",
+        "college_name": "QRS Music Academy",
+        "admission_dates": "2023-09-08",
+        "events": ["Music Workshop", "Talent Show", "Concert Night"],
+        "research_history": "Promotes research and innovation in music and music-related studies.",
+        "sports": ["Dance", "Singing", "Yoga"],
+        "rating" : 4
+      }
+  
+]
