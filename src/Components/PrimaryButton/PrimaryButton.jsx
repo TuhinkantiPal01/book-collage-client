@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { Button } from "@mui/material";
 import "./style.css"
 
-const PrimaryButton = () => {
+const PrimaryButton = ({text}) => {
     return (
         <>
-            <Button variant="outlined">Admission Now</Button>
+            <Button variant="outlined">{text}</Button>
         </>
     );
 };

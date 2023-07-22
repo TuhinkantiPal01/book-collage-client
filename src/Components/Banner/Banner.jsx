@@ -9,24 +9,23 @@ const Banner = ({ title, subtitle, height }) => {
 
   return (
     <>
-      {location.pathname === "Banner" ? (
+      {location.pathname === "/" ? (
         <>
           <section className={`banner h-screen -mt-20 flex justify-center items-center`}>
             <div className='max-w-5xl mx-auto text-center space-y-5 text-[#E3F6FF]'>
               <h1 className='text-5xl'>{title}</h1>
               <h5 className='text-3xl'>{subtitle}</h5>
-              {location.pathname === "/" && (
-                <>
-                  {" "}
-                  <h6 className='text-2xl'>Admission Now</h6>
-                  <span className='flex justify-center'>
-                    <AiOutlineArrowDown size={40} />
-                  </span>
-                  <Link to='/admission'>
-                    <PrimaryButton></PrimaryButton>
-                  </Link>
-                </>
-              )}
+
+              <>
+                {" "}
+                <h6 className='text-2xl'>Admission Now</h6>
+                <span className='flex justify-center'>
+                  <AiOutlineArrowDown size={40} />
+                </span>
+                <Link to='/admission'>
+                  <PrimaryButton text='Admission Now' />
+                </Link>
+              </>
             </div>
           </section>
         </>
@@ -36,18 +35,6 @@ const Banner = ({ title, subtitle, height }) => {
             <div className='max-w-5xl mx-auto text-center space-y-5 text-[#E3F6FF]'>
               <h1 className='text-5xl'>{title}</h1>
               <h5 className='text-3xl'>{subtitle}</h5>
-              {location.pathname === "/" && (
-                <>
-                  {" "}
-                  <h6 className='text-2xl'>Admission Now</h6>
-                  <span className='flex justify-center'>
-                    <AiOutlineArrowDown size={40} />
-                  </span>
-                  <Link to='/admission'>
-                    <PrimaryButton></PrimaryButton>
-                  </Link>
-                </>
-              )}
             </div>
           </section>
         </>

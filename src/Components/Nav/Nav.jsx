@@ -15,6 +15,8 @@ import headerImg from "../../assets/header.png";
 import "./Nav.css";
 import Search from "./search/search";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
 const pages = [
   {
@@ -144,7 +146,7 @@ const Nav = () => {
 
             <Search />
 
-            <Box sx={{ flexGrow: 0 }}>
+            {/* <Box sx={{ flexGrow: 0 }}>
               <Tooltip title='Open settings'>
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                   <Avatar alt='Remy Sharp' src='/static/images/avatar/2.jpg' />
@@ -172,7 +174,9 @@ const Nav = () => {
                   </MenuItem>
                 ))}
               </Menu>
-            </Box>
+            </Box> */}
+
+            <Link to="/login"><PrimaryButton text="Login"/></Link>
           </Toolbar>
         </Container>
       </AppBar>

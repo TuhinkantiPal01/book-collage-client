@@ -21,6 +21,29 @@ const currencies = [
   },
 ];
 
+const review=[
+  {
+    value: 1,
+    label:1,
+  },
+  {
+    value: 2,
+    label:2,
+  },
+  {
+    value: 3,
+    label:3,
+  },
+  {
+    value: 4,
+    label:4,
+  },
+  {
+    value: 5,
+    label:5,
+  }
+]
+
 const Addreview = () => {
   return (
     <section>
@@ -55,9 +78,9 @@ const Addreview = () => {
               variant='filled'
               size='small'
             >
-              {currencies.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
+              {review.map(({value , label}) => (
+                <MenuItem key={label} value={value}>
+                  {label}
                 </MenuItem>
               ))}
             </TextField>
