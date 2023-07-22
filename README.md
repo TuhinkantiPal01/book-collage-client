@@ -1,1 +1,1 @@
-# work with Banner
+# work with My Collage section
