@@ -5,17 +5,17 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
-
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/provider/AuthProvider";
 
 const Registration = () => {
   const [checked, setChecked] = useState(false);
-  console.log(checked);
+  const [error,setError] = useState("")
+  
 
-  const {user} = useContext(AuthContext);
-  console.log(user);
+  const {createUser} = useContext(AuthContext);
+  
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
@@ -24,11 +24,24 @@ const Registration = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    createUser(data.email, data.password)
+    .then((result) =>{
+      console.log(result);
+      reset();
+    })
+    .catch((error) => {
+      console.log(error.code);
+      if (error.code === "auth/email-already-in-use") {
+        setError("Email already in use")
+      }
+    });
+
+    
   };
 
   return (
@@ -103,6 +116,7 @@ const Registration = () => {
                 <Checkbox checked={checked} onChange={handleChange} inputProps={{ "aria-label": "controlled" }} />
                 Accept Terms and Conditions
               </div>
+              <span className="text-red-500">{error}</span>
               <Button disabled={!checked} type='submit' variant='contained' color='secondary' fullWidth>
                 Registration
               </Button>
