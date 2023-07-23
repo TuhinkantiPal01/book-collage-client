@@ -2,16 +2,19 @@ import loginImg from "../../assets/login.png";
 import Banner from "../../Components/Banner/Banner";
 import { Button, TextField, Typography } from "@mui/material";
 import "./style.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const [error, setError] = useState("");
   const { logIn } = useContext(AuthContext);
+
+  const navigate = useNavigate();
 
   const {
     register,
@@ -26,6 +29,13 @@ const Login = () => {
     logIn(data.email, data.password)
       .then((result) => {
         console.log(result);
+        Swal.fire({
+          icon: 'success',
+          title: 'Login Success',
+          showConfirmButton: false,
+          timer: 1500
+        });
+        navigate("/")
         reset();
       })
       .catch((error) => {

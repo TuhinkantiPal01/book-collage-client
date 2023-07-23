@@ -1,6 +1,7 @@
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Autocomplete from "@mui/material/Autocomplete";
+import useCollage from "../../Hooks/collageHook";
 
 const Search = () => {
   const top100Films = [
@@ -129,6 +130,8 @@ const Search = () => {
     { title: "3 Idiots", year: 2009 },
     { title: "Monty Python and the Holy Grail", year: 1975 },
   ];
+
+  const [data] = useCollage();
   return (
     <div>
       <Stack spacing={2} sx={{ width: 220 , marginRight:3 }}>
@@ -137,7 +140,7 @@ const Search = () => {
           freeSolo
           id='free-solo-2-demo'
           disableClearable
-          options={top100Films.map((option) => option.title)}
+          options={data.map((names) => names.name)}
           renderInput={(params) => (
             <TextField
               {...params}

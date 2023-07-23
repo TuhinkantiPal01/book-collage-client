@@ -3,7 +3,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions, Rating } from "@mui/material";
+import { Button, CardActionArea, Rating } from "@mui/material";
 import img from "../../assets/collage.jpg";
 import "./Style.css";
 
@@ -12,28 +12,32 @@ const CollageCard = ({ data }) => {
 
   return (
     <>
-      {data.map(({ college_name, rating }, index) => (
-        <Card key={index} sx={{ maxWidth: 345 }}>
+      {data.map(({ name, rating, researchHistory, admissionDates }, index) => (
+        <Card className='min-h-[450px] relative' key={index} sx={{ maxWidth: 345 }}>
           <CardActionArea>
             <CardMedia component='img' height='140' image={img} alt='green iguana' />
             <CardContent>
               <Typography gutterBottom variant='h6' component='div'>
-                {college_name}
+                {name}
               </Typography>
-              <Rating name='read-only' value={rating} readOnly />
+              <div><Rating name='read-only' value={rating} readOnly /></div>
+              Admission Dates:
+              {admissionDates.map((dates , index) => (
+                <Typography key={index} gutterBottom variant='p' component='div'>
+                  {dates}
+                </Typography>
+              ))}
               <Typography gutterBottom variant='p' component='div'>
-                Admission Date : 10-10-2023
-              </Typography>
-              <Typography gutterBottom variant='p' component='div'>
-                ReSearch : 10
+                ReSearch: {researchHistory?.length}
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions>
-            <Button variant='contained' fullWidth>
+
+          <div className='absolute bottom-0 w-full'>
+            <Button variant='contained' size='medium' fullWidth>
               View Details
             </Button>
-          </CardActions>
+          </div>
         </Card>
       ))}
     </>

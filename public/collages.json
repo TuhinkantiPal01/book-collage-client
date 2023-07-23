@@ -1,93 +1,93 @@
 [
-    {
-        "image": "college1.jpg",
-        "college_name": "ABC University",
-        "admission_dates": "2023-08-15",
-        "events": ["Freshers' Party", "Tech Fest", "Cultural Night"],
-        "research_history": "Founded in 1950, renowned for groundbreaking research in various fields.",
-        "sports": ["Football", "Basketball", "Swimming"],
-        "rating" : 5
-      },
-      {
-        "image": "college2.jpg",
-        "college_name": "XYZ College",
-        "admission_dates": "2023-09-01",
-        "events": ["Orientation Day", "Annual Sports Meet", "Literary Festival"],
-        "research_history": "Home to the state-of-the-art research center for advanced technology.",
-        "sports": ["Cricket", "Tennis", "Badminton"],
-        "rating" : 4
-      },
-      {
-        "image": "college3.jpg",
-        "college_name": "EFG Institute",
-        "admission_dates": "2023-08-20",
-        "events": ["College Fest", "Science Exhibition", "Alumni Reunion"],
-        "research_history": "Established in 1965, known for pioneering research in environmental sciences.",
-        "sports": ["Volleyball", "Athletics", "Table Tennis"],
-        "rating" : 4.5
-      },
-      {
-        "image": "college4.jpg",
-        "college_name": "PQR University",
-        "admission_dates": "2023-09-05",
-        "events": ["Annual Day Celebration", "Robotics Expo", "Debate Competition"],
-        "research_history": "Has a rich history of producing Nobel laureates and impactful research.",
-        "sports": ["Hockey", "Chess", "Gymnastics"],
-        "rating":3.9
-      },
-      {
-        "image": "college5.jpg",
-        "college_name": "LMN College of Arts",
-        "admission_dates": "2023-08-25",
-        "events": ["Art Exhibition", "Drama Fest", "Music Night"],
-        "research_history": "Promotes artistic research and innovation in visual arts and performing arts.",
-        "sports": ["Paintball", "Dance", "Yoga"],
-        "rating" : 5
-      },
-      {
-        "image": "college6.jpg",
-        "college_name": "RST Engineering Institute",
-        "admission_dates": "2023-09-10",
-        "events": ["Tech Expo", "Coding Contest", "RoboWars"],
-        "research_history": "Known for groundbreaking research in engineering and technology advancements.",
-        "sports": ["Archery", "Car Racing", "Martial Arts"],
-        "rating" : 3
-      },
-      {
-        "image": "college7.jpg",
-        "college_name": "UVW Medical College",
-        "admission_dates": "2023-08-30",
-        "events": ["Medical Symposium", "Health Camp", "White Coat Ceremony"],
-        "research_history": "Has a rich legacy of medical breakthroughs and life-saving research.",
-        "sports": ["Cricket", "Basketball", "Athletics"],
-        "rating" : 4.4
-      },
-      {
-        "image": "college8.jpg",
-        "college_name": "MNO Business School",
-        "admission_dates": "2023-09-15",
-        "events": ["Entrepreneurship Summit", "Leadership Conference", "Business Quiz"],
-        "research_history": "Focuses on research in management and business strategies.",
-        "sports": ["Golf", "Squash", "Rugby"],
-        "rating" : 5
-      },
-      {
-        "image": "college9.jpg",
-        "college_name": "JKL Law College",
-        "admission_dates": "2023-08-22",
-        "events": ["Legal Symposium", "Moot Court Competition", "Law Fest"],
-        "research_history": "Known for groundbreaking legal research and contributions to the legal field.",
-        "sports": ["Tennis", "Basketball", "Chess"],
-        "rating" : 4.8
-      },
-      {
-        "image": "college10.jpg",
-        "college_name": "QRS Music Academy",
-        "admission_dates": "2023-09-08",
-        "events": ["Music Workshop", "Talent Show", "Concert Night"],
-        "research_history": "Promotes research and innovation in music and music-related studies.",
-        "sports": ["Dance", "Singing", "Yoga"],
-        "rating" : 4
-      }
+  {
+    "name": "Dhaka University",
+    "address": "Ramna, Dhaka 1000",
+    "rating": 4.8,
+    "image": "http://example.com/dhaka_university.jpg",
+    "admissionDates": ["January 15", "April 10", "August 20"],
+    "events": ["Cultural Fest", "Science Exhibition", "Sports Week"],
+    "researchHistory": ["Nobel Laureates", "Cutting-edge Technology", "Groundbreaking Discoveries"],
+    "sports": ["Cricket", "Football", "Badminton"]
+  },
+  {
+    "name": "Chittagong University",
+    "address": "Chittagong, Bangladesh",
+    "rating": 4.5,
+    "image": "http://example.com/chittagong_university.jpg",
+    "admissionDates": ["February 20", "June 5", "October 15"],
+    "events": ["Annual Cultural Night", "Literary Fair", "Sports Gala"],
+    "researchHistory": ["Environmental Studies", "Marine Biology", "Archaeological Discoveries"],
+    "sports": ["Basketball", "Volleyball", "Table Tennis"]
+  },
+  {
+    "name": "Rajshahi University",
+    "address": "Rajshahi, Bangladesh",
+    "rating": 4.6,
+    "image": "http://example.com/rajshahi_university.jpg",
+    "admissionDates": ["March 10", "July 25", "November 5"],
+    "events": ["Rajshahi Day Celebration", "Cultural Extravaganza", "Sports Championship"],
+    "researchHistory": ["Historical Studies", "Social Sciences Research", "Agricultural Research"],
+    "sports": ["Hockey", "Kabaddi", "Athletics"]
+  },
+  {
+    "name": "Khulna University",
+    "address": "Khulna, Bangladesh",
+    "rating": 4.3,
+    "image": "http://example.com/khulna_university.jpg",
+    "admissionDates": ["April 5", "August 15", "December 1"],
+    "events": ["Folk Music Festival", "Tech Fair", "Annual Sports Meet"],
+    "researchHistory": ["Biotechnology Research", "Renewable Energy Studies", "Environmental Conservation"],
+    "sports": ["Swimming", "Chess", "Wrestling"]
+  },
+  {
+    "name": "Jahangirnagar University",
+    "address": "Savar, Dhaka, Bangladesh",
+    "rating": 4.7,
+    "image": "http://example.com/jahangirnagar_university.jpg",
+    "admissionDates": ["May 1", "September 10", "December 20"],
+    "events": ["Grand Cultural Carnival", "Science Symposium", "Inter-Department Sports"],
+    "researchHistory": ["Biodiversity Studies", "Social Sciences Research", "Climate Change Impact"],
+    "sports": ["Tennis", "Cricket", "Archery"]
+  },
+  {
+    "name": "Bangladesh Agricultural University",
+    "address": "Mymensingh, Bangladesh",
+    "rating": 4.4,
+    "image": "http://example.com/bau.jpg",
+    "admissionDates": ["January 5", "July 1", "November 15"],
+    "events": ["Agriculture Fair", "Tech Symposium", "Sports Carnival"],
+    "researchHistory": ["Agricultural Research", "Plant Genetics", "Livestock Management"],
+    "sports": ["Rugby", "Basketball", "Baseball"]
+  },
+  {
+    "name": "BUET",
+    "address": "Dhaka, Bangladesh",
+    "rating": 4.9,
+    "image": "http://example.com/buet.jpg",
+    "admissionDates": ["February 1", "June 20", "October 10"],
+    "events": ["Engineering Expo", "Innovation Summit", "BUET Sports Fiesta"],
+    "researchHistory": ["Engineering Breakthroughs", "Technological Advancements", "Infrastructure Development"],
+    "sports": ["Cricket", "Football", "Tennis"]
+  },
+  {
+    "name": "Islamic University, Bangladesh",
+    "address": "Kushtia, Bangladesh",
+    "rating": 4.2,
+    "image": "http://example.com/islamic_university.jpg",
+    "admissionDates": ["March 15", "July 5", "November 25"],
+    "events": ["Islamic Cultural Fest", "Literary Symposium", "Inter-Department Sports"],
+    "researchHistory": ["Islamic Studies", "Arabic Literature", "Sufi Philosophy"],
+    "sports": ["Football", "Volleyball", "Cricket"]
+  },
+  {
+    "name": "North South University",
+    "address": "Bashundhara, Dhaka, Bangladesh",
+    "rating": 4.7,
+    "image": "http://example.com/north_south_university.jpg",
+    "admissionDates": ["May 10", "September 15", "December 10"],
+    "events": ["NSU Cultural Night", "Business Symposium", "Sports Fest"],
+    "researchHistory": ["Business Research", "Computer Science Innovations", "Social Sciences Studies"],
+    "sports": ["Cricket", "Football", "Badminton"]
+  }
   
 ]

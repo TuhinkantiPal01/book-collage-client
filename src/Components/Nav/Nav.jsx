@@ -1,4 +1,3 @@
-import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -15,8 +14,11 @@ import headerImg from "../../assets/header.png";
 import "./Nav.css";
 import Search from "./search/search";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import { AuthContext } from "../provider/AuthProvider";
+import { useContext, useState } from "react";
+import Load from "../userLoader/userLoader";
+
 
 const pages = [
   {
@@ -36,11 +38,11 @@ const pages = [
     link: "/myCollage",
   },
 ];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Nav = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const { user, loading, logOut } = useContext(AuthContext);
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -55,6 +57,14 @@ const Nav = () => {
 
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
+  };
+
+  const logoutHandler = () => {
+    logOut()
+      .then(() => {})
+      .catch((e) => {
+        console.log(e);
+      });
   };
 
   return (
@@ -146,37 +156,51 @@ const Nav = () => {
 
             <Search />
 
-            {/* <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title='Open settings'>
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt='Remy Sharp' src='/static/images/avatar/2.jpg' />
-                </IconButton>
-              </Tooltip>
-              <Menu
-                sx={{ mt: "45px" }}
-                id='menu-appbar'
-                anchorEl={anchorElUser}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElUser)}
-                onClose={handleCloseUserMenu}
-              >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign='center'>{setting}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box> */}
+            {loading ? (
+              <>
+                <Load />
+              </>
+            ) : (
+              <>
+                {user ? (
+                  <>
+                    <Box sx={{ flexGrow: 0 }}>
+                      <Tooltip title='User'>
+                        <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                          <Avatar alt='Remy Sharp' src='/static/images/avatar/2.jpg' />
+                        </IconButton>
+                      </Tooltip>
+                      <Menu
+                        sx={{ mt: "45px" }}
+                        id='menu-appbar'
+                        anchorEl={anchorElUser}
+                        anchorOrigin={{
+                          vertical: "top",
+                          horizontal: "right",
+                        }}
+                        keepMounted
+                        transformOrigin={{
+                          vertical: "top",
+                          horizontal: "right",
+                        }}
+                        open={Boolean(anchorElUser)}
+                        onClose={handleCloseUserMenu}
+                      >
+                        <MenuItem>Profile</MenuItem>
 
-            <Link to="/login"><PrimaryButton text="Login"/></Link>
+                        <MenuItem onClick={logoutHandler}>Logout</MenuItem>
+                      </Menu>
+                    </Box>
+                  </>
+                ) : (
+                  <>
+                    <Link to='/login'>
+                      <PrimaryButton text='Login' />
+                    </Link>
+                  </>
+                )}
+              </>
+            )}
           </Toolbar>
         </Container>
       </AppBar>
