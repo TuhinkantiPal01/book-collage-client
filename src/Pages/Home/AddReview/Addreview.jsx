@@ -1,7 +1,7 @@
 import { Button, MenuItem, TextField } from "@mui/material";
 import PageTitle from "../../../Components/PageTitle/PageTitle";
 import "./style.css";
-import useCollage from "../../../Components/Hooks/collageHook";
+import usecollage from "../../../Components/Hooks/collageHook";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
@@ -29,17 +29,18 @@ const review = [
 ];
 
 const AddReview = () => {
-  const [data] = useCollage();
+  const [data] = usecollage();
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
     
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://book-collage-server.vercel.app/reviews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,6 +59,7 @@ const AddReview = () => {
           });
         }
       });
+      reset();
   };
 
   return (
@@ -66,7 +68,7 @@ const AddReview = () => {
 
       <div className='my-16 w-[70%] mx-auto'>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className='grid grid-cols-2 gap-x-10 gap-y-12 mb-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12 mb-6'>
             <div>
               <TextField
                 size='small'
@@ -97,8 +99,8 @@ const AddReview = () => {
               <TextField
                 id='filled-select-currency'
                 select
-                label='Select Collage'
-                helperText='Please select Collage'
+                label='Select collage'
+                helperText='Please select collage'
                 variant='filled'
                 size='small'
                 name='collage'
@@ -111,7 +113,7 @@ const AddReview = () => {
                   </MenuItem>
                 ))}
               </TextField>
-              <div>{errors.collage && <span className='text-red-500'>Please Select Collage</span>}</div>
+              <div>{errors.collage && <span className='text-red-500'>Please Select collage</span>}</div>
             </div>
             <div>
               <TextField

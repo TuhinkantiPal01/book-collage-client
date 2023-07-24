@@ -1,11 +1,11 @@
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Autocomplete from "@mui/material/Autocomplete";
-import useCollage from "../../Hooks/collageHook";
+import usecollage from "../../Hooks/collageHook";
 import "./style.css"
 
 const Search = () => {
-  const [data] = useCollage();
+  const [data] = usecollage();
   return (
     <div className="mr-8">
       <Stack spacing={2} sx={{ width: 200 }}>
@@ -18,7 +18,7 @@ const Search = () => {
           renderInput={(params) => (
             <TextField
             {...params}
-             label='Search Collage'
+             label='Search College'
              InputProps={{
                ...params.InputProps,
                type: "search",

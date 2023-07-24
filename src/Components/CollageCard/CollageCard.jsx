@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -11,7 +11,6 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 
 const CollageCard = ({ data }) => {
-  
   
 
   return (

@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 
-const useCollageDetails = (id) => {
+const usecollageDetails = (id) => {
     const {data = [] , isLoading , error , refetch} = useQuery({
         queryKey:["collage",id],
         queryFn: async() =>{
@@ -19,4 +19,4 @@ const useCollageDetails = (id) => {
 
 }
 
-export default useCollageDetails;
+export default usecollageDetails;

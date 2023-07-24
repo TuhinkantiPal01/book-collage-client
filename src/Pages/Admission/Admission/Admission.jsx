@@ -1,7 +1,7 @@
 import { Button, MenuItem, TextField } from "@mui/material";
 import Banner from "../../../Components/Banner/Banner";
 import { AuthContext } from "../../../Components/provider/AuthProvider";
-import useCollage from "../../../Components/Hooks/collageHook";
+import usecollage from "../../../Components/Hooks/collageHook";
 import { useContext, useReducer, useState } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
@@ -49,15 +49,12 @@ const subjects = [
 ];
 
 const Admission = () => {
-  const [data] = useCollage();
+  const [data] = usecollage();
   const [error, setError] = useState("");
   const { user } = useContext(AuthContext);
 
   const navigate = useNavigate()
  
-
-  console.log(data);
-
   const initialState = {
     name: user?.displayName,
     email: user?.email,
@@ -122,7 +119,7 @@ const Admission = () => {
                 showConfirmButton: false,
                 timer: 1500
               })
-              navigate("/myCollage",{replace: true})
+              navigate("/mycollage",{replace: true})
             }
 
           });
@@ -132,10 +129,10 @@ const Admission = () => {
 
   return (
     <div>
-      <Banner title='Admission Now' subtitle='Your Favorite Collage' height='96' />
+      <Banner title='Admission Now' subtitle='Your Favorite collage' height='96' />
       <div className='my-16 w-[70%] mx-auto'>
         <form>
-          <div className='grid grid-cols-2 gap-x-10 gap-y-12 mb-6'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12 mb-6'>
             <TextField
               size='small'
               type='text'
@@ -229,8 +226,8 @@ const Admission = () => {
               id='filled-select-currency'
               select
               name="collage"
-              label='Select Collage'
-              helperText='Please select Collage'
+              label='Select College'
+              helperText='Please select College'
               variant='filled'
               size='small'
               onChange={(e) =>

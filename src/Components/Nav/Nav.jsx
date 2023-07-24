@@ -26,7 +26,7 @@ const pages = [
     link: "/",
   },
   {
-    title: "Collages ",
+    title: "Colleges ",
     link: "/collages",
   },
   {
@@ -34,8 +34,8 @@ const pages = [
     link: "/admission",
   },
   {
-    title: "My Collage ",
-    link: "/myCollage",
+    title: "My College ",
+    link: "/mycollage",
   },
 ];
 
@@ -84,7 +84,7 @@ const Nav = () => {
                 textDecoration: "none",
               }}
             >
-              BookMyCollage
+             <Link to="/"> BookMyCollege</Link>
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -125,24 +125,19 @@ const Nav = () => {
                 ))}
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+            
             <Typography
-              variant='h5'
+              variant='h6'
               noWrap
-              component='a'
-              href=''
               sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
+                display: { xs: "none", md: "flex" },
                 fontFamily: "monospace",
                 fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
+                color: "#white",
                 textDecoration: "none",
               }}
             >
-              LOGO
+             <Link to="/"> BookMyCollege</Link>
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map(({ title, link }, index) => (

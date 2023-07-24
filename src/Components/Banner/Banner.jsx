@@ -11,10 +11,10 @@ const Banner = ({ title, subtitle, height }) => {
     <>
       {location.pathname === "/" ? (
         <>
-          <section className={`banner h-screen -mt-20 flex justify-center items-center`}>
-            <div className='max-w-5xl mx-auto text-center space-y-5 text-[#E3F6FF]'>
-              <h1 className='text-5xl'>{title}</h1>
-              <h5 className='text-3xl'>{subtitle}</h5>
+          <section className={`banner h-96 md:h-screen -mt-20 flex justify-center items-center`}>
+            <div className='max-w-5xl mx-auto text-center space-y-1 md:space-y-5 text-[#E3F6FF]'>
+              <h1 className='text-2xl md:text-5xl'>{title}</h1>
+              <h5 className='text-xl md:text-3xl'>{subtitle}</h5>
 
               <>
                 {" "}
@@ -33,8 +33,8 @@ const Banner = ({ title, subtitle, height }) => {
         <>
           <section className={`banner h-${height} -mt-20 flex justify-center items-center`}>
             <div className='max-w-5xl mx-auto text-center space-y-5 text-[#E3F6FF]'>
-              <h1 className='text-5xl'>{title}</h1>
-              <h5 className='text-3xl'>{subtitle}</h5>
+              <h1 className='text-2xl md:text-5xl'>{title}</h1>
+              <h5 className='text-xl md:text-3xl'>{subtitle}</h5>
             </div>
           </section>
         </>

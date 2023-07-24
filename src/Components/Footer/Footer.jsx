@@ -17,7 +17,7 @@ const Footer = () => {
               textDecoration: "none",
             }}
           >
-            BookMyCollage
+            BookMycollage
           </Typography>
           <div className="flex gap-x-5 mt-5 justify-between">
             <BsFacebook size={25}/>
@@ -29,9 +29,9 @@ const Footer = () => {
           <h4 className="text-xl mb-4">Links</h4>
           <ul className="text-blue-500">
             <li>Home</li>
-            <li>Collages</li>
+            <li>collages</li>
             <li>Admission</li>
-            <li>My Collages</li>
+            <li>My collages</li>
           </ul>
         </div>
         <div>

@@ -16,7 +16,7 @@ const Collage = () => {
         </>
       ) : (
         <>
-          <div className="max-w-5xl mx-auto grid grid-cols-3 place-items-center my-20 gap-y-16">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-x-10 place-items-center my-20 gap-y-16">
             <CollageCard data={data} />
           </div>
         </>
