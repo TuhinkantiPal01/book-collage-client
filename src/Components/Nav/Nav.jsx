@@ -9,7 +9,6 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import headerImg from "../../assets/header.png";
 import "./Nav.css";
 import Search from "./search/search";
@@ -126,19 +125,6 @@ const Nav = () => {
               </Menu>
             </Box>
             
-            <Typography
-              variant='h6'
-              noWrap
-              sx={{
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                color: "#white",
-                textDecoration: "none",
-              }}
-            >
-             <Link to="/"> BookMyCollege</Link>
-            </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map(({ title, link }, index) => (
                 <Link to={link} key={index}>

@@ -23,7 +23,7 @@ const Gallery = () => {
 
       <div className='py-20'>
         <Swiper
-          slidesPerView={2}
+          slidesPerView={1}
           spaceBetween={30}
           autoplay={{
             delay: 1500,
@@ -32,6 +32,13 @@ const Gallery = () => {
           loop={true}
           navigation={true}
           modules={[Autoplay, Navigation]}
+          breakpoints={{
+           
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 50,
+            },
+          }}
           className='mySwiper'
         >
           {images.map((image, index) => (

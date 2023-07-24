@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 
-const useReview = (id) => {
+const useReview = () => {
     const {data = [] , isLoading , error , refetch} = useQuery({
-        queryKey:["collage",id],
+        queryKey:["collage"],
         queryFn: async() =>{
             try{
                 const response = await fetch(`https://book-collage-server.vercel.app/reviews`)
