@@ -2,7 +2,7 @@ import loginImg from "../../assets/login.png";
 import Banner from "../../Components/Banner/Banner";
 import { Button, TextField, Typography } from "@mui/material";
 import "./style.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
 import { useForm } from "react-hook-form";
@@ -12,8 +12,9 @@ import Swal from "sweetalert2";
 
 const Login = () => {
   const [error, setError] = useState("");
-  const { logIn } = useContext(AuthContext);
-
+  const { logIn, googleLogin ,githubLogin } = useContext(AuthContext);
+  const location = useLocation();
+  const from = location.state?.from.pathname || "/";
   const navigate = useNavigate();
 
   const {
@@ -23,34 +24,41 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
-  
-
   const onSubmit = (data) => {
     logIn(data.email, data.password)
       .then((result) => {
         console.log(result);
         Swal.fire({
-          icon: 'success',
-          title: 'Login Success',
+          icon: "success",
+          title: "Login Success",
           showConfirmButton: false,
-          timer: 1500
+          timer: 1500,
         });
-        navigate("/")
+        navigate(from, { replace: true });
         reset();
       })
       .catch((error) => {
         console.log(error.code);
         if (error.code === "auth/user-not-found") {
-          setError("User not found")
+          setError("User not found");
         }
 
         if (error.code === "auth/wrong-password") {
-          setError("Wrong password")
+          setError("Wrong password");
         }
       });
-
-      
   };
+  const googleLoginHandler = () => {
+    googleLogin()
+      .then(() => {navigate(from, { replace: true });})
+      .catch((e) => {console.log(e)});
+  };
+
+  const githubLoginHandler = () => {
+    githubLogin()
+    .then(()=>{})
+    .catch((e) => {console.log(e)});
+  }
 
   return (
     <section>
@@ -83,8 +91,10 @@ const Login = () => {
                 {...register("password", { required: true })}
               />
               {errors.password && <span className='text-red-500'>Password is required.</span>}
-              
-              <div><span className="text-red-500">{error}</span></div>
+
+              <div>
+                <span className='text-red-500'>{error}</span>
+              </div>
               <Button type='submit' variant='contained' color='success' fullWidth>
                 Login
               </Button>
@@ -102,8 +112,8 @@ const Login = () => {
                 </Typography>
               </div>
               <div className='mt-5 flex justify-center gap-x-10'>
-                <FcGoogle size={30} />
-                <AiFillGithub size={30} />
+                <FcGoogle className="cursor-pointer" onClick={googleLoginHandler} size={50} />
+                <AiFillGithub className="cursor-pointer" onClick={githubLoginHandler} size={50} />
               </div>
             </div>
           </div>

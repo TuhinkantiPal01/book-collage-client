@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 
-const useCollage = (id) => {
+const useCollageDetails = (id) => {
     const {data = [] , isLoading , error , refetch} = useQuery({
         queryKey:["collage",id],
         queryFn: async() =>{
             try{
-                const response = await fetch(`https://book-collage-server-tuhinofficial.vercel.app/collages`)
+                const response = await fetch(`https://book-collage-server-tuhinofficial.vercel.app/collages/${id}`)
                 const data  = response.json();
                 return data
             }
@@ -19,4 +19,4 @@ const useCollage = (id) => {
 
 }
 
-export default useCollage;
+export default useCollageDetails;

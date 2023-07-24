@@ -2,20 +2,21 @@ import loginImg from "../../assets/registration.png";
 import Banner from "../../Components/Banner/Banner";
 import { Button, Checkbox, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
 import "./style.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillGithub } from "react-icons/ai";
 import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Registration = () => {
   const [checked, setChecked] = useState(false);
-  const [error,setError] = useState("")
-  
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const from = location.state?.from.pathname || "/";
 
-  const {createUser} = useContext(AuthContext);
-  
+  const { createUser, update ,googleLogin } = useContext(AuthContext);
 
   const handleChange = (event) => {
     setChecked(event.target.checked);
@@ -30,18 +31,53 @@ const Registration = () => {
 
   const onSubmit = (data) => {
     createUser(data.email, data.password)
-    .then((result) =>{
-      console.log(result);
-      reset();
-    })
-    .catch((error) => {
-      console.log(error.code);
-      if (error.code === "auth/email-already-in-use") {
-        setError("Email already in use")
-      }
-    });
+      .then((result) => {
+        console.log(result);
 
-    
+        update(data.name, data.image)
+          .then(() => {})
+          .catch(() => {});
+
+        const newUser = {
+          name: data.name,
+          email: data.email,
+          image: data.image,
+          gender: data.gender,
+        };
+
+        fetch("https://book-collage-server-tuhinofficial.vercel.app/users", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify(newUser),
+        })
+          .then((res) => res.json())
+          .then((data) => console.log(data));
+
+        Swal.fire({
+          icon: "success",
+          title: "Successfully Registered",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+
+        reset();
+        navigate("/", { replace: true });
+      })
+      .catch((error) => {
+        console.log(error.code);
+        if (error.code === "auth/email-already-in-use") {
+          setError("Email already in use");
+        }
+      });
+  };
+
+  const googleLoginHandler = () => {
+    googleLogin()
+      .then(() => {navigate(from, { replace: true });})
+      .catch((e) => {console.log(e)});
   };
 
   return (
@@ -95,10 +131,14 @@ const Registration = () => {
                 {...register("password", { required: true, pattern: /^.{8,}$/i })}
               />
               <div>
-                {" "}
-                {errors.password && <span className='text-red-500'>Password is required.</span>}
-                {errors.password?.type === "pattern" && <span className='text-red-500'>Password Must Need Eight Characters</span>}<br />
+                {errors.password && <span className='text-red-500'>Password is required.</span>} <br />
               </div>
+              <div>
+                {errors.password?.type === "pattern" && (
+                  <span className='text-red-500'>Password Must Need Eight Characters</span>
+                )}
+              </div>
+
               <FormControl sx={{ m: 1, minWidth: 150 }} size='small'>
                 <InputLabel id='demo-select-small-label'>Gender</InputLabel>
                 <Select
@@ -116,7 +156,7 @@ const Registration = () => {
                 <Checkbox checked={checked} onChange={handleChange} inputProps={{ "aria-label": "controlled" }} />
                 Accept Terms and Conditions
               </div>
-              <span className="text-red-500">{error}</span>
+              <span className='text-red-500'>{error}</span>
               <Button disabled={!checked} type='submit' variant='contained' color='secondary' fullWidth>
                 Registration
               </Button>
@@ -134,8 +174,8 @@ const Registration = () => {
                 </Typography>
               </div>
               <div className='mt-5 flex justify-center gap-x-10'>
-                <FcGoogle size={30} />
-                <AiFillGithub size={30} />
+                <FcGoogle className="cursor-pointer" onClick={googleLoginHandler} size={50} />
+                <AiFillGithub className="cursor-pointer" size={50} />
               </div>
             </div>
           </div>

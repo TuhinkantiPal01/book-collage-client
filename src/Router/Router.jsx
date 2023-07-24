@@ -7,6 +7,8 @@ import MyCollage from "../Pages/MyCollage/MyCollage/MyCollage";
 import Login from "../Pages/Login/Login";
 import Registration from "../Pages/Registration/Registration";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import CollageDetails from "../Pages/MyCollage/CollageDetails/CollageDetails";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -24,11 +26,15 @@ const router = createBrowserRouter([
             },
             {
                 path:"admission",
-                element:<Admission/>
+                element:<PrivateRoute><Admission/></PrivateRoute>
             },
             {
                 path:"myCollage",
-                element:<MyCollage/>
+                element:<PrivateRoute><MyCollage/></PrivateRoute>
+            },
+            {
+                path:"collageDetails/:id",
+                element:<CollageDetails/>
             },
             {
                 path:"login",

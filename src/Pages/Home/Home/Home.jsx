@@ -1,5 +1,5 @@
 import Banner from "../../../Components/Banner/Banner";
-import Addreview from "../AddReview/Addreview";
+import AddReview from "../AddReview/Addreview";
 import Gallery from "../Gallery/Gallery";
 import ReSearch from "../ReSearch/ReSearch";
 import TopCollage from "../TopCollage/TopCollage";
@@ -12,7 +12,7 @@ const Home = () => {
         <TopCollage />
         <Gallery/>
         <ReSearch/>
-        <Addreview/>
+        <AddReview/>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@
     "name": "Dhaka University",
     "address": "Ramna, Dhaka 1000",
     "rating": 4.8,
-    "image": "http://example.com/dhaka_university.jpg",
+    "image": "https://i.ibb.co/vDwdGBv/dhakauniversity.jpg",
     "admissionDates": ["January 15", "April 10", "August 20"],
     "events": ["Cultural Fest", "Science Exhibition", "Sports Week"],
     "researchHistory": ["Nobel Laureates", "Cutting-edge Technology", "Groundbreaking Discoveries"],
@@ -13,7 +13,7 @@
     "name": "Chittagong University",
     "address": "Chittagong, Bangladesh",
     "rating": 4.5,
-    "image": "http://example.com/chittagong_university.jpg",
+    "image": "https://i.ibb.co/9Ny6LCD/ctguniversity.jpg",
     "admissionDates": ["February 20", "June 5", "October 15"],
     "events": ["Annual Cultural Night", "Literary Fair", "Sports Gala"],
     "researchHistory": ["Environmental Studies", "Marine Biology", "Archaeological Discoveries"],
@@ -23,7 +23,7 @@
     "name": "Rajshahi University",
     "address": "Rajshahi, Bangladesh",
     "rating": 4.6,
-    "image": "http://example.com/rajshahi_university.jpg",
+    "image": "https://i.ibb.co/DRnZnCf/RU-Entrance.jpg",
     "admissionDates": ["March 10", "July 25", "November 5"],
     "events": ["Rajshahi Day Celebration", "Cultural Extravaganza", "Sports Championship"],
     "researchHistory": ["Historical Studies", "Social Sciences Research", "Agricultural Research"],
@@ -33,7 +33,7 @@
     "name": "Khulna University",
     "address": "Khulna, Bangladesh",
     "rating": 4.3,
-    "image": "http://example.com/khulna_university.jpg",
+    "image": "https://i.ibb.co/HBdg823/ku1.jpg",
     "admissionDates": ["April 5", "August 15", "December 1"],
     "events": ["Folk Music Festival", "Tech Fair", "Annual Sports Meet"],
     "researchHistory": ["Biotechnology Research", "Renewable Energy Studies", "Environmental Conservation"],
@@ -43,7 +43,7 @@
     "name": "Jahangirnagar University",
     "address": "Savar, Dhaka, Bangladesh",
     "rating": 4.7,
-    "image": "http://example.com/jahangirnagar_university.jpg",
+    "image": "https://i.ibb.co/Qp9pxWy/jahangirnagar.jpg",
     "admissionDates": ["May 1", "September 10", "December 20"],
     "events": ["Grand Cultural Carnival", "Science Symposium", "Inter-Department Sports"],
     "researchHistory": ["Biodiversity Studies", "Social Sciences Research", "Climate Change Impact"],
@@ -53,7 +53,7 @@
     "name": "Bangladesh Agricultural University",
     "address": "Mymensingh, Bangladesh",
     "rating": 4.4,
-    "image": "http://example.com/bau.jpg",
+    "image": "https://i.ibb.co/6JPtw3h/agr.jpg",
     "admissionDates": ["January 5", "July 1", "November 15"],
     "events": ["Agriculture Fair", "Tech Symposium", "Sports Carnival"],
     "researchHistory": ["Agricultural Research", "Plant Genetics", "Livestock Management"],
@@ -63,7 +63,7 @@
     "name": "BUET",
     "address": "Dhaka, Bangladesh",
     "rating": 4.9,
-    "image": "http://example.com/buet.jpg",
+    "image": "https://i.ibb.co/vDRN9TY/buet.jpg",
     "admissionDates": ["February 1", "June 20", "October 10"],
     "events": ["Engineering Expo", "Innovation Summit", "BUET Sports Fiesta"],
     "researchHistory": ["Engineering Breakthroughs", "Technological Advancements", "Infrastructure Development"],
@@ -73,7 +73,7 @@
     "name": "Islamic University, Bangladesh",
     "address": "Kushtia, Bangladesh",
     "rating": 4.2,
-    "image": "http://example.com/islamic_university.jpg",
+    "image": "https://i.ibb.co/WPYqDgn/islamic.jpg",
     "admissionDates": ["March 15", "July 5", "November 25"],
     "events": ["Islamic Cultural Fest", "Literary Symposium", "Inter-Department Sports"],
     "researchHistory": ["Islamic Studies", "Arabic Literature", "Sufi Philosophy"],
@@ -83,7 +83,7 @@
     "name": "North South University",
     "address": "Bashundhara, Dhaka, Bangladesh",
     "rating": 4.7,
-    "image": "http://example.com/north_south_university.jpg",
+    "image": "https://i.ibb.co/gPKVLKV/ns.jpg",
     "admissionDates": ["May 10", "September 15", "December 10"],
     "events": ["NSU Cultural Night", "Business Symposium", "Sports Fest"],
     "researchHistory": ["Business Research", "Computer Science Innovations", "Social Sciences Studies"],
@@ -91,3 +91,11 @@
   }
   
 ]
+
+
+
+
+
+
+
+

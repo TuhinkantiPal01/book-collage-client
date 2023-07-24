@@ -1,25 +1,9 @@
 import { Button, MenuItem, TextField } from "@mui/material";
 import PageTitle from "../../../Components/PageTitle/PageTitle";
 import "./style.css";
+import useCollage from "../../../Components/Hooks/collageHook";
 
-const currencies = [
-  {
-    value: "USD",
-    label: "$",
-  },
-  {
-    value: "EUR",
-    label: "€",
-  },
-  {
-    value: "BTC",
-    label: "฿",
-  },
-  {
-    value: "JPY",
-    label: "¥",
-  },
-];
+
 
 const review=[
   {
@@ -44,7 +28,9 @@ const review=[
   }
 ]
 
-const Addreview = () => {
+const AddReview = () => {
+  const [data] = useCollage();
+  
   return (
     <section>
       <PageTitle title='Add Your Review' />
@@ -63,9 +49,9 @@ const Addreview = () => {
               variant='filled'
               size='small'
             >
-              {currencies.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
+              {data.map(({name}) => (
+                <MenuItem key={name} value={name}>
+                  {name}
                 </MenuItem>
               ))}
             </TextField>
@@ -97,4 +83,4 @@ const Addreview = () => {
   );
 };
 
-export default Addreview;
+export default AddReview;
