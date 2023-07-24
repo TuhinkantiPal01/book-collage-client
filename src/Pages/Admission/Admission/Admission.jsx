@@ -104,7 +104,7 @@ const Admission = () => {
       return;
     }
 
-    fetch("https://book-collage-server-tuhinofficial.vercel.app/admission", {
+    fetch("https://book-collage-server.vercel.app/admission", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -118,7 +118,7 @@ const Admission = () => {
             if (data.insertedId) {
               Swal.fire({
                 icon: 'success',
-                title: 'Your work has been saved',
+                title: 'Admission Successful',
                 showConfirmButton: false,
                 timer: 1500
               })

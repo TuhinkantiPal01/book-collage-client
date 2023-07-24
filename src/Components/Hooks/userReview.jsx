@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 
-const useCollageDetails = (id) => {
+const useReview = (id) => {
     const {data = [] , isLoading , error , refetch} = useQuery({
         queryKey:["collage",id],
         queryFn: async() =>{
             try{
-                const response = await fetch(`https://book-collage-server.vercel.app/collages/${id}`)
+                const response = await fetch(`http://localhost:5000/reviews`)
                 const data  = response.json();
                 return data
             }
@@ -19,4 +19,4 @@ const useCollageDetails = (id) => {
 
 }
 
-export default useCollageDetails;
+export default useReview;

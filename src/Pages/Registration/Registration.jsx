@@ -45,7 +45,7 @@ const Registration = () => {
           gender: data.gender,
         };
 
-        fetch("https://book-collage-server-tuhinofficial.vercel.app/users", {
+        fetch("https://book-collage-server.vercel.app/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
